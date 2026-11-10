@@ -1,15 +1,14 @@
-import type { Task } from "../types/taskItem"
-
-type TaskItems = {
-    task: Task;
+export type Task = {
+    title: String;
+    completed: Boolean | string;
 }
 
-export const Tasks = ({ task }: TaskItems) => {
+export const Tasks = ({ title, completed }: Task) => {
   return (
     <section>
         <div>
-            <h1>{task.title}</h1>
-            <h2></h2>
+            <h1>{title}</h1>
+            <h2>{String(completed)}</h2>
         </div>
     </section>
   )
